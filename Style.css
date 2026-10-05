@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #120009;
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.content,
+.final-content {
+    max-width: 700px;
+}
+
+.small-text {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.subtitle,
+.message,
+.final p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4f81;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff2f6d;
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+.opening {
+    background:
+        radial-gradient(circle at center, #5c102e, #120009 70%);
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday {
+    display: none;
+    background:
+        radial-gradient(circle at center, #401025, #120009 70%);
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+    display: none;
+    flex-direction: column;
+    background:
+        radial-gradient(circle at center, #351021, #120009 70%);
+}
+
+.photo-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: 35px;
+}
+
+
+/* Common design for all 7 photos */
+
+.photo {
+    width: 220px;
+    height: 280px;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+}
+
+
+/* Photo 1 */
+
+.photo:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+
+/* Photo 2 */
+
+.photo:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+
+/* Photo 3 */
+
+.photo:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+
+/* Photo 4 */
+
+.photo:nth-child(4) {
+    transform: rotate(4deg);
+}
+
+
+/* Photo 5 */
+
+.photo:nth-child(5) {
+    transform: rotate(-3deg);
+}
+
+
+/* Photo 6 */
+
+.photo:nth-child(6) {
+    transform: rotate(2deg);
+}
+
+
+/* Photo 7 */
+
+.photo:nth-child(7) {
+    transform: rotate(-4deg);
+}
+
+
+/* Hover effect */
+
+.photo:hover {
+    transform: scale(1.08) rotate(0deg);
+    z-index: 10;
+}
+
+
+/* Images */
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    display: none;
+    background:
+        radial-gradient(circle at center, #650f35, #120009 70%);
+}
+
+.final-content {
+    animation: fadeIn 2s ease;
+}
+
+.heart {
+    font-size: 80px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.love {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   HEARTBEAT
+========================= */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================
+   FADE IN
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .photo-container {
+        gap: 18px;
+    }
+
+    .photo {
+        width: 180px;
+        height: 230px;
+    }
+
+    .subtitle,
+    .message,
+    .final p {
+        font-size: 17px;
+    }
+}
